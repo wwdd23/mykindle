@@ -9,10 +9,10 @@ import smtplib
 msg = MIMEMultipart()
 
 #构造附件1
-##att1 = MIMEText(open('d:\\123.rar', 'rb').read(), 'base64', 'gb2312')
-#att1["Content-Type"] = 'application/octet-stream'
-#att1["Content-Disposition"] = 'attachment; filename="123.doc"'#这里的filename可以任意写，写什么名字，邮件中显示什么名字
-#msg.attach(att1)
+att1 = MIMEText(open('/Users/wudi/github/mykindle/51cce9cd0120c.jpg', 'rb').read(), 'base64', 'gb2312')
+att1["Content-Type"] = 'application/octet-stream'
+att1["Content-Disposition"] = 'attachment; filename="picture.jpg"'#这里的filename可以任意写，写什么名字，邮件中显示什么名字
+msg.attach(att1)
 #
 ##构造附件2
 #att2 = MIMEText(open('d:\\123.txt', 'rb').read(), 'base64', 'gb2312')
@@ -28,7 +28,7 @@ msg['subject'] = 'hello world'
 try:
     server = smtplib.SMTP()
     server.connect('smtp.163.com')
-    server.login('wwdd.23','xxxx')#XXX为用户名，XXXXX为密码
+    server.login('wwdd.23','075100.321')#XXX为用户名，XXXXX为密码
     server.sendmail(msg['from'], msg['to'],msg.as_string())
     server.quit()
     print '发送成功'
