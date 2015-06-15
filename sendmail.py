@@ -28,7 +28,7 @@ msg['subject'] = 'hello world'
 try:
     server = smtplib.SMTP()
     server.connect('smtp.163.com')
-    server.login('wwdd.23','075100.321')#XXX为用户名，XXXXX为密码
+    server.login('wwdd.23','xxxxx')#XXX为用户名，XXXXX为密码
     server.sendmail(msg['from'], msg['to'],msg.as_string())
     server.quit()
     print '发送成功'

@@ -9,7 +9,8 @@
 
 
 
-import Tkinter
+import Tkinter 
+
 
 from tkMessageBox import *
 
@@ -17,8 +18,11 @@ top = Tkinter.Tk()
 
 def cancel_click():
         showinfo('温馨提示','您点击【取消】操作')
+        close.Tk()
 def save_click():
         showinfo('温馨提示','您点击【保存】操作')
+
+
 
 btn_Cancel=Tkinter.Button(top,text='取消')
 btn_Cancel.pack(side=Tkinter.RIGHT)
