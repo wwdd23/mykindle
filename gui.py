@@ -14,8 +14,6 @@ import Tkinter
 
 from tkMessageBox import *
 
-top = Tkinter.Tk()
-
 def cancel_click():
         showinfo('温馨提示','您点击【取消】操作')
         close.Tk()
@@ -23,8 +21,14 @@ def save_click():
         showinfo('温馨提示','您点击【保存】操作')
 
 
+top = Tkinter.Tk()
 
-btn_Cancel=Tkinter.Button(top,text='取消')
+Tkinter.Entry(top).pack()
+Tkinter.Label(top,text="user name").pack(side=Tkinter.LEFT)
+
+
+btn_Cancel=Tkinter.Button(top,text='取消',command =top.quit)
+
 btn_Cancel.pack(side=Tkinter.RIGHT)
 
 
